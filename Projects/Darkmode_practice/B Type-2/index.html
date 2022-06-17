@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <title></title>
+<style type="text/css" media="all">
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+nav {
+  width: 96%;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  position: fixed;
+  top: 10px;
+  background: rgba(20, 54, 80, 0.06);
+  box-shadow: 0 8px 10px 0 rgba(31, 38, 135, 0.66);
+  backdrop-filter: blur(12.4px);
+  -webkit-backdrop-filter: blur(12.4px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+    
+}
+.logo {
+  font-size: 30px;
+  font-weight: 800;
+  
+}
+label{
+  position: relative;
+  width: 22px;
+  height: 22px;
+  border: 2px solid black;
+  border-radius: 0px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  justify-content: center;
+  transform: 0.7s;
+}
+label:before{
+  position: absolute;
+  content: '';
+  width:22px;
+  height: 22px;
+  border-radius: 0%;
+  background: #000;
+  cursor: pointer;
+  transition: 0.3s;
+}
+label.active {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px dotted  white;
+ background: transition;
+}
+label.active:before {
+  width: 10px;
+  height: 10px;
+  background-color: gold;
+  border-radius: 50%;
+  transform: rotatez(360deg);
+}
+body.night{
+ background: black;
+ color: #fff;
+
+}
+
+</style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        Redremix 
+      </div>
+      <label  id="dark-change"></label>
+    </nav>
+<br />
+<br />
+<br />
+<br />
+<br />
+    <div class="text">
+1. Creat a folder 📂  (mkdir foldername) <br />
+2. Go to this folder (cd foldername)<br />
+3. Create a file (touch filename.extention)<br />
+4. git init <br />
+5. git add -A / git add . /git add file namebr <br />
+6. git commit -m "your message" <br />
+7. git remote add origin {github link} <br />
+8. git push -u origin master <br />
+9. Enter your username <br />
+10. Enter the github token
+    </div>
+    
+<script type="text/javascript" charset="utf-8">
+var content = document.getElementsByTagName('body')[0];
+var darkMode = document.getElementById('dark-change');
+  
+        darkMode.addEventListener('click', function(){
+            darkMode.classList.toggle('active');
+            content.classList.toggle('night');
+        })
+
+</script>
+  </body>
+</html>

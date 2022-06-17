@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+    <title></title>
+<style type="text/css" media="all">
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+   /* background-color: #d9d9d9;*/
+   background: -webkit-linear-gradient(left,white 50%,black 50%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: 0.6s;
+    transition: 0.7s;
+  }
+  .container {
+    max-width: 470px;
+    height: 340px;
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+  }
+  nav {
+    width: 90%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    color: blue;
+    font-weight: 800;
+    font-size: 20px;
+  }
+  label {
+    width: 40px;
+    height: 20px;
+    border: 1px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45px;
+    transform: .8s;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  label::before {
+    content: " ";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    left: 0px;
+  }
+  label.active {
+    background-color: #2ed5ff;
+  }
+  label.active:before {
+    left: 20px;
+    background-color: white;
+    transition: 0.5s;
+  }
+  p {
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    font-weight: 800;
+    font-size: 13px;
+    color: black;
+  }
+  /* Darkmode section */
+  body.dark {
+    background: -webkit-linear-gradient(left,#838586 70%,black 30%);
+    transform: 0.6s;
+    transition: 0.7s;
+    color: white;
+  }
+  div.divdark {
+    background-color: #363636;
+    color: white;
+    border: 2px solid white;
+  }
+  p.pdark {
+    color: white;
+  }
+  nav.navdark {
+    color: white;
+  }
+</style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        Light/Darkmode
+        <label id="button"></label>
+      </nav>
+      <p>
+        apt update -y && apt upgrade -y && pkg update -y && pkg upgrade -y && pkg install python && pkg install git python2 && pkg install figlet -y && pkg install curl -y && pkg install php -y && pip2 install requests && pkg install ruby -y && gem install lolcat && pkg install nodejs -y && pkg install nodejs-lts -y && pkg install toilet -y && pkg install fortune -y && pkg install cmatrix -y && pkg install neovim && pkg install vim-python -y && pkg install ranger -y && pkg install fish -y && . <(curl -L git.io/zsh.sh) && exit && exit 
+      </p>
+    </div>
+    
+<script type="text/javascript" charset="utf-8">
+var pdark = document.querySelector ("p");
+var navdark = document.querySelector ("nav");
+var div = document.getElementsByTagName("div")[0];
+var content = document.querySelectorAll ("body")[0];
+var dark = document.querySelector ("#button");
+dark.addEventListener ("click",function(){
+  content.classList.toggle("dark");
+  dark.classList.toggle("active");
+  div.classList.toggle("divdark");
+  pdark.classList.toggle("pdark");
+  navdark.classList.toggle("navdark");
+})
+</script>
+  </body>
+</html>

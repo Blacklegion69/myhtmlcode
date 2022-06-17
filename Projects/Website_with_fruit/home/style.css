@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #f30a0a;
+  position: relative;
+  flex-direction: column;
+}
+header
+{
+  width: 98%;
+  position: relative;
+  top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba( 225, 225, 225, 0.2 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.30 );
+  backdrop-filter: blur( 9px );
+  -webkit-backdrop-filter: blur( 9px );
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  position: fixed;
+  z-index: 100;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+header h1 {
+  color: white;
+}
+.nav 
+{
+  width: 270px;
+  text-align: center;
+  right: 0px;
+
+}
+.nav ul
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  margin: 2px;
+}
+.social 
+{
+  width: 60px;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  background: rgba( 225, 225, 225, 0.2 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.30 );
+  backdrop-filter: blur( 9px );
+  -webkit-backdrop-filter: blur( 9px );
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  top: 30vh;
+  right: 10px;
+  z-index: 200;
+}
+.social img
+{
+  transform: scale(0.7);
+  margin: 5px auto;
+}
+.content 
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+}
+.content h1 
+{
+  width: 200px;
+}
+.content p 
+{
+  font-weight: 900;
+  font-size: 15px;
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: justify;
+  position: relative;
+  line-break: 3px;
+  word-spacing: 2px;
+}
+.content button 
+{
+  width: 120px;
+  outline: none;
+  font-weight: 900;
+  padding: 10px;
+  margin: 10px 0px 10px 0px;
+  border-radius: 2px;
+  border: none;
+}
+.content img 
+{
+  width: 320px;
+  height: 320px;
+  margin: 10px auto;
+}
+.fruit_name 
+{
+  
+  font-size: 50px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  margin: 40px 0px 120px 0px;
+  opacity: 30%;
+}
+.slider 
+{
+  width: 340px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px auto;
+   background: rgba( 225, 225, 225, 0.2 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.30 );
+  backdrop-filter: blur( 9px );
+  -webkit-backdrop-filter: blur( 9px );
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  position: fixed;
+  bottom: 10px;
+}
+.slider img 
+{
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  transition: 0.2s;
+}
+.slider img:hover 
+{
+  background: rgba( 225, 225, 225, 0.2 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.30 );
+  backdrop-filter: blur( 9px );
+  -webkit-backdrop-filter: blur( 9px );
+  border-radius: 5px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}

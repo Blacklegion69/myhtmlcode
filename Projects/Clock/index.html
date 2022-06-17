@@ -1,0 +1,294 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <title></title>
+<style type="text/css" media="all">
+  * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.textstroke {
+  text-stroke: 1px #87daef;
+  -webkit-text-stroke: 1px #87daef;
+}
+.banner {
+  width: 300px;
+  height: 60px;
+  border-radius: 0px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow:  5px 5px 10px #bebebe,
+             -5px -5px 10px #ffffff;
+  margin: 50px;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  overflow: hidden;
+  z-index: 1;
+}
+.banner > p {
+  z-index: 4;
+}
+.banner::before {
+  content: " ";
+  position: absolute;
+  width: calc(100% - 5px);
+  height: calc(100% - 5px);
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  z-index: 3;
+  
+}
+.banner::after {
+  content: " ";
+  position: absolute;
+  width: 200%;
+  height: 50%;
+  background:-webkit-linear-gradient(left,rgb(252,179,41), rgba(0,204,255,0.75), rgb(252,20,208),rgba(42,255,0,0.83), rgba(244,10,219,0.745));
+  z-index: 2;
+  animation: animatee 3s linear infinite;
+}
+@keyframes animatee {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+.container {
+  width: 355px;
+  height: 355px;
+  display: flex;
+  border: 1px solid red;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+  background: #e0e0e0;
+  box-shadow:  5px 5px 10px #bebebe,
+             -5px -5px 10px #ffffff;
+/*
+  border-top-left-radius: 350px;
+  border-top-right-radius: 350px;
+*/
+ top: 100px;
+  overflow: hidden;
+}
+
+ .container::before {
+  content:  "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:-webkit-linear-gradient(left,red 50%,black 50%);
+  animation: animateed 2s linear infinite;
+}
+@keyframes animateed {
+  100% {
+    transform: rotatez(360deg);
+    filter: hue-rotate (360deg);
+  }
+}
+
+.container > .parentsclock {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.container > .parentsclock::before {
+  content:  "";
+  position: absolute;
+    width: 100%;
+  height: 100%;
+  background:-webkit-linear-gradient(left,rgb(252,179,41), rgba(0,204,255,0.75), rgb(252,20,208),rgba(42,255,0,0.83), rgba(244,10,219,0.745));
+}
+@keyframes animate {
+  100% {
+    transform: rotatez(-360deg);
+    filter: hue-rotate (360deg);
+  }
+}
+.container > .parentsclock > .clock {
+  width: 345px;
+  height: 345px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px;
+  background: #e0e0e0;
+  position: relative;
+  box-shadow:inset 5px 5px 10px #bebebe,
+           inset -5px -5px 10px #ffffff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.container > .parentsclock > .clock::before {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #ff5c00;
+  background-color: rgba(18,28,27,1);
+  z-index: 9;
+}
+.clock > span {
+  position: absolute;
+  inset: 15px;
+  text-align: center;
+  transform: rotate(calc(30deg * var(--i)));
+}
+.clock > span > b {
+  font-size: 25px;
+  font-weight: 800;
+  display: inline-block;
+  transform: rotate(calc(-30deg * var(--i)));
+  text-stroke: 1px #87daef;
+  -webkit-text-stroke: 1px #87daef;
+
+}
+.circle {
+  width: 230px;
+  height: 230px;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid black;
+  border-top: 2px solid red;
+}
+.circle > i {
+  position: absolute;
+  background: var(--clr);
+  width: 7px;
+  height: 50%;
+  transform-origin: bottom;
+  opacity: 100%;
+  transform:scale(0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
+.circle > i::before {
+  content: " ";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  opacity: 100%;
+  background-color: white;
+  border: 1px solid #00ff23;
+  border-bottom: 1px solid black;
+  top: -5px;
+  border-radius: 50%;
+  animation: cirbef 2s linear infinite;
+}
+.circle:nth-child(1) i {
+  width: 2px;
+}
+.circle:nth-child(2) i {
+  width: 5px;
+}
+.circle2 {
+  width: 190px;
+  height: 190px;
+}
+.circle3 {
+  width: 150px;
+  height: 150px;
+}
+.circle::before {
+  content: " ";
+  position: absolute;
+  top: -8px;
+  width: 8px;
+  height: 8px;
+  border: 1.5px dotted transparent;
+  border-bottom: 1.5px dotted #00ff58;
+  border-radius: 50%;
+  background: var(--clr);
+ /*
+  box-shadow: 0px 0px 60px var(--clr),
+              0px 0px 10px 1px var(--clr);
+  */
+  animation: cirbef 2s linear infinite;
+  overflow: hidden;
+}
+@keyframes cirbef {
+  100% {
+    transform: rotatez(360deg);
+  }
+}
+</style>
+  </head>
+  <body>
+    <div class="banner">
+      <p class="textstroke">
+         Analog Clock
+      </p>
+    </div>
+    <div class="container">
+      <div class="parentsclock">
+      <div class="clock">
+        <div id="sc" class="circle" style="--clr:#000000"><i></i></div>
+        <div id="mn" class="circle circle2" style="--clr:rgb(32,14,137)"><i></i></div>
+        <div id="hr" class="circle circle3" style="--clr:#401c1c"><i></i></div>
+       
+        <span style="--i:1;"><b>1</b></span>
+        <span style="--i:2;"><b>2</b></span>
+        <span style="--i:3;"><b>3</b></span>
+        <span style="--i:4;"><b>4</b></span>
+        <span style="--i:5;"><b>5</b></span>
+        <span style="--i:6;"><b>6</b></span>
+        <span style="--i:7;"><b>7</b></span>
+        <span style="--i:8;"><b>8</b></span>
+        <span style="--i:9;"><b>9</b></span>
+        <span style="--i:10;"><b>10</b></span>
+        <span style="--i:11;"><b>11</b></span>
+        <span style="--i:12;"><b>12</b></span>
+    
+        
+      </div>
+      </div>
+    </div>
+    
+    
+<script type="text/javascript" charset="utf-8">
+    const deg = 6;
+    const hr = document.querySelector('#hr');
+    const mn = document.querySelector('#mn');
+    const sc = document.querySelector('#sc');
+
+    setInterval(() => {
+        let day = new Date();
+        let hh = day.getHours() * 30;
+        let mm = day.getMinutes() * deg;
+        let ss = day.getSeconds() * deg;
+
+        hr.style.transform = `rotateZ(${hh + mm / 12}deg)`;
+        mn.style.transform = `rotateZ(${mm}deg)`;
+        sc.style.transform = `rotateZ(${ss}deg)`;
+    });
+</script>
+  </body>
+</html>

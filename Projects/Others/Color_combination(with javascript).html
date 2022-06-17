@@ -1,0 +1,291 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+    <title></title>
+<style type="text/css" media="all">
+  @font-face {
+    font-family: myfont;
+    src: url("../Operator_Mono.wotf");
+    font-weight: 900;
+  }
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: myfont;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  header {
+    text-align: center;
+    font-weight: 1000;
+    font-size: 50px;
+    margin: 50px;
+    text-decoration: underline;
+  }
+  .container {
+    width: 80%;
+    height: 120px;
+    border-radius: 8px;
+    background: none;
+    box-shadow:  5px 5px 10px #bebebe,
+             -5px -5px 10px #ffffff;
+    margin: 20px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    overflow: hidden;
+  }
+  .container::before {
+    content: " ";
+    position: absolute;
+    width: 120%;
+    height: 200px;
+    transform: rotatez(-15deg);
+    background: -webkit-linear-gradient(279deg, #d123b5, #2212ac);
+   
+}
+  .container::after {
+    content: " ";
+    position: absolute;
+    inset: 4px;
+    background: #e0e0e0;
+    z-index: 3;
+    border-radius: 8px;
+  }
+  .box {
+    width: 49.5%;
+    height: 90%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto;
+    position: relative;
+    column-gap: 19px;
+    z-index: 4;
+  }
+  span {
+    max-width: 99%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .Color {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+  }
+  .Colors {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+  }
+  
+  .Color:nth-child(1){
+    z-index: 3;
+  }
+  .Color:nth-child(2){
+    z-index: -3;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .Colors:nth-child(1){
+    z-index: -3;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .Colors:nth-child(2){
+    z-index: 3;
+  }
+  @media (max-width:900px) {
+    .container {
+      height: 200px;
+      justify-content: center;
+      align-items: center;
+      display: grid;
+      position: relative;
+      grid-template-columns: auto;
+    }
+    .container::before {
+      left: -30px;
+    }
+    .box {
+      width: 299px;
+      height: 90%;
+      grid-template-columns: auto;
+      margin: 0px auto;
+      position: relative;
+    }
+  }
+</style>
+  </head>
+  <body>
+  <header>
+    Color Combination
+  </header>
+  <div class="container">
+    <div class="box">
+      <span id="bgcolor" style="background-color:#1E202D"></span>
+      <span id="bgcolor"  style="background-color:#50C4D3"></span>
+      <span id="code">#1E202D <br />rgb(30,32,45)</span>
+      <span id="code">#50C4D3 <br />rgb(80,192,211)</span>
+    </div>
+    <div class="box">
+      <div class="Color" style="background:-webkit-linear-gradient(left,#1E202D,transparent)"></div>
+      <div class="Color" style="background:-webkit-linear-gradient(left,#1E202D,transparent)"></div>
+      <div class="Colors" style="background:-webkit-linear-gradient(left,transparent,#da1111)"></div>
+      <div class="Colors" style="background:-webkit-linear-gradient(left,transparent,#da1111)"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="box">
+      <span id="bgcolor" style="background-color:#1E202D"></span>
+      <span id="bgcolor"  style="background-color:#50C4D3"></span>
+      <span id="code">#1E202D <br />rgb(30,32,45)</span>
+      <span id="code">#50C4D3 <br />rgb(80,192,211)</span>
+    </div>
+    <div class="box">
+      <div class="Color" style="background:-webkit-linear-gradient(left,#1E202D,transparent)"></div>
+      <div class="Color" style="background:-webkit-linear-gradient(left,#1E202D,transparent)"></div>
+      <div class="Colors" style="background:-webkit-linear-gradient(left,transparent,#da1111)"></div>
+      <div class="Colors" style="background:-webkit-linear-gradient(left,transparent,#da1111)"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="box">
+      <span id="bgcolor" style="background-color:#1E202D"></span>
+      <span id="bgcolor"  style="background-color:#50C4D3"></span>
+      <span id="code">#1E202D <br />rgb(30,32,45)</span>
+      <span id="code">#50C4D3 <br />rgb(80,192,211)</span>
+    </div>
+    <div class="box">
+      <div class="Color" style="background:-webkit-linear-gradient(left,#1E202D,transparent)"></div>
+      <div class="Color" style="background:-webkit-linear-gradient(left,#1E202D,transparent)"></div>
+      <div class="Colors" style="background:-webkit-linear-gradient(left,transparent,#da1111)"></div>
+      <div class="Colors" style="background:-webkit-linear-gradient(left,transparent,#da1111)"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="box">
+      <span id="bgcolor" style="background-color:#1E202D"></span>
+      <span id="bgcolor"  style="background-color:#50C4D3"></span>
+      <span id="code">#1E202D <br />rgb(30,32,45)</span>
+      <span id="code">#50C4D3 <br />rgb(80,192,211)</span>
+    </div>
+    <div class="box">
+      <div class="Color" style="background:-webkit-linear-gradient(left,#1E202D,transparent)"></div>
+      <div class="Color" style="background:-webkit-linear-gradient(left,#1E202D,transparent)"></div>
+      <div class="Colors" style="background:-webkit-linear-gradient(left,transparent,#da1111)"></div>
+      <div class="Colors" style="background:-webkit-linear-gradient(left,transparent,#da1111)"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="box">
+      <span id="bgcolor" style="background-color:#1E202D"></span>
+      <span id="bgcolor"  style="background-color:#50C4D3"></span>
+      <span id="code">#1E202D <br />rgb(30,32,45)</span>
+      <span id="code">#50C4D3 <br />rgb(80,192,211)</span>
+    </div>
+    <div class="box">
+      <div class="Color" style="background:-webkit-linear-gradient(left,#1E202D,transparent)"></div>
+      <div class="Color" style="background:-webkit-linear-gradient(left,#1E202D,transparent)"></div>
+      <div class="Colors" style="background:-webkit-linear-gradient(left,transparent,#da1111)"></div>
+      <div class="Colors" style="background:-webkit-linear-gradient(left,transparent,#da1111)"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="box">
+      <span id="bgcolor" style="background-color:#1E202D"></span>
+      <span id="bgcolor"  style="background-color:#50C4D3"></span>
+      <span id="code">#1E202D <br />rgb(30,32,45)</span>
+      <span id="code">#50C4D3 <br />rgb(80,192,211)</span>
+    </div>
+    <div class="box">
+      <div class="Color" style="background:-webkit-linear-gradient(left,#1E202D,transparent)"></div>
+      <div class="Color" style="background:-webkit-linear-gradient(left,#1E202D,transparent)"></div>
+      <div class="Colors" style="background:-webkit-linear-gradient(left,transparent,#da1111)"></div>
+      <div class="Colors" style="background:-webkit-linear-gradient(left,transparent,#da1111)"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="box">
+      <span id="bgcolor" style="background-color:#1E202D"></span>
+      <span id="bgcolor"  style="background-color:#50C4D3"></span>
+      <span id="code">#1E202D <br />rgb(30,32,45)</span>
+      <span id="code">#50C4D3 <br />rgb(80,192,211)</span>
+    </div>
+    <div class="box">
+      <div class="Color" style="background:-webkit-linear-gradient(left,#1E202D,transparent)"></div>
+      <div class="Color" style="background:-webkit-linear-gradient(left,#1E202D,transparent)"></div>
+      <div class="Colors" style="background:-webkit-linear-gradient(left,transparent,#da1111)"></div>
+      <div class="Colors" style="background:-webkit-linear-gradient(left,transparent,#da1111)"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="box">
+      <span id="bgcolor" style="background-color:#1E202D"></span>
+      <span id="bgcolor"  style="background-color:#50C4D3"></span>
+      <span id="code">#1E202D <br />rgb(30,32,45)</span>
+      <span id="code">#50C4D3 <br />rgb(80,192,211)</span>
+    </div>
+    <div class="box">
+      <div class="Color" style="background:-webkit-linear-gradient(left,#1E202D,transparent)"></div>
+      <div class="Color" style="background:-webkit-linear-gradient(left,#1E202D,transparent)"></div>
+      <div class="Colors" style="background:-webkit-linear-gradient(left,transparent,#da1111)"></div>
+      <div class="Colors" style="background:-webkit-linear-gradient(left,transparent,#da1111)"></div>
+    </div>
+  </div>
+  
+<script type="text/javascript" charset="utf-8">
+  var bgcolor = document.querySelectorAll("#bgcolor");
+  var code = document.querySelectorAll("#code");
+  var Color = document.querySelectorAll(".Color");
+  var Colors = document.querySelectorAll(".Colors");
+  var hexcolor = [
+    "#1E202D","#50C4D3",
+    "#5294F5","CE1595",
+    "#000000","#5BC2E5",
+    "#F3006C","#68009B",
+    "#FDE102","#F70C4E",
+    "#183C48","#E5E9E8",
+    "#08083F","#E810E7",
+    "#373743","#22222A"
+    ]
+  console.log (hexcolor.length);
+  
+  var rgbcolor = [
+    "rgb(30,32,45)","rgb(80,192,211)",
+    "rgb(82,148,245)","rgb(206,21,149)",
+    "rgb(00,00,00)","rgb(91,194,229)",
+    "rgb(243,00,108)","rgb(104,00,15)",
+    "rgb(253,225,2)","rgb(247,12,78)",
+    "rgb(24,60,72)","rgb(229,223,232)",
+    "rgb(8,8,63)","rgb(232,16,231)",
+    "rgb(55,55,67)","rgb(34,34,42)"
+    ]
+  console.log (rgbcolor.length);
+  
+  for (var i=0; i<hexcolor.length; i++) {
+    bgcolor[i].style.backgroundColor = `${hexcolor[i]}`;
+    code[i].innerHTML = `${hexcolor[i]}` +  "<br />" + `${rgbcolor[i]}`;
+    Color[i].style.background = "-webkit-linear-gradient(left," + `${hexcolor[i]}` + "," + "transparent)";
+    Colors[i].style.background = "-webkit-linear-gradient(left,"+ "transparent" + "," + `${hexcolor[i]}` +")";
+  }
+  
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+    <script src="https://kit.fontawesome.com/034032e716.js" crossorigin="anonymous"></script>
+    <title></title>
+<style type="text/css" media="all">
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(82,148,245);
+  }
+  .container {
+    width: 100px;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  .item {
+    padding: 10px;
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto;
+    margin: 10px;
+  }
+  .item i {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    margin: 2px;
+    padding: 0px 100px 0px 0px;
+  }
+  .item span {
+    width: 130px;
+    margin: 0px auto;
+    padding: 5px;
+    font-weight: 900;
+  }
+  .button {
+    color: black;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 30px;
+    position: absolute;
+    bottom: 30px;
+  }
+  /* javascript  part */
+  .container_toggle {
+    width: 300px;
+    position: relative;
+  }
+  .button_toggle {
+    background-color:  rgb(82,148,245);
+  }
+</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </div>
+      <div class="item">
+        <i class="fa-solid fa-address-book"></i>
+        <span>Contact</span>
+      </div>
+      <div class="item">
+        <i class="fa-solid fa-comment-sms"></i>
+        <span>Chat</span>
+      </div>
+      <div class="item">
+        <i class="fa-solid fa-circle-question"></i>
+        <span>How to?</span>
+      </div>
+      <div class="item">
+        <i class="fa-solid fa-gear"></i>
+        <span>Settings</span>
+      </div>
+      <div class="item">
+        <i class="fa-solid fa-lock"></i>
+        <span>Security</span>
+      </div>
+      <div class="item">
+        <i class="fa-solid fa-info"></i>
+        <span>More</span>
+      </div>
+      <div class="item">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+      </div>
+      <div class="button">
+        <i class="fa-solid fa-circle-dot"></i>
+      </div>
+    </div>
+<script type="text/javascript" charset="utf-8">
+const span = document.querySelectorAll ("span");
+const container = document.querySelector (".container");
+const button = document.querySelector (".button");
+var x = 0;
+button.addEventListener ("click",function(){
+  x ++;
+  container.classList.toggle("container_toggle");
+  if (x%2!==0) {
+  button.style.backgroundColor = "rgb(82,148,245)";
+  }
+  else {
+  button.style.backgroundColor = "white";
+  }
+})
+</script>
+  </body>
+</html>
