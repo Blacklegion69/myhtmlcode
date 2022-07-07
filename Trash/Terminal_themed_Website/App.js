@@ -12,3 +12,4 @@ const fullbody = document.querySelectorAll(".fullbody")[0];
 var n = Math.floor(Math.random()*rgbcolor.length);
 var color = rgbcolor[`${n}`];
 fullbody.style.backgroundColor = `${color}`;
+
