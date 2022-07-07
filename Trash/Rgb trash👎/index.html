@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>rgba</title>
+<style type="text/css" media="all">
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: 0.3s;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  .result {
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    margin: 10px auto;
+    background-color: white;
+    box-shadow: 4px 4px 8px rgb(189 200 213), -4px -4px 8px rgb(255 255 255);
+  }
+  .container {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px;
+    background-color: white;
+    top: 70vh;
+    box-shadow: 4px 4px 8px rgb(189 200 213), -4px -4px 8px rgb(255 255 255);
+  }
+  span {
+    width: 80%;
+    padding: 6px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 8px rgb(189 200 213), -4px -4px 8px rgb(255 255 255);
+    border-radius: 10px;
+    background-color: white;
+  }
+  input {
+    border-radius: 90px;
+    padding: 0px 5px 0px 5px;
+    box-shadow: none;
+    transition: 0.3s;
+  }
+  span:hover input {
+    box-shadow: 4px 4px 8px rgb(189 200 213), -4px -4px 8px rgb(255 255 255);
+  }
+  span > p {
+    width: 70px;
+    text-align: right;
+    margin: 0px 9px 0px 0px;
+    font-weight: 900;
+  }
+  span > h4 {
+    width: 70px;
+    text-align: center;
+    font-size: 20px;
+  }
+</style>
+  </head>
+  <body onload="change()">
+    <div class="result" id="result"> </div>
+    <div class="container">
+      <span id="redspan">
+        <p>Red:</p>
+        <input type="range" id="red" value="100" min="0" max="255" />
+        <h4 id="redv">#</h4>
+      </span>
+      <span id="greenspan">
+        <p>Green:</p>
+        <input type="range" id="green" value="100" min="0" max="255" />
+        <h4 id="greenv">#</h4>
+      </span>
+      <span id="bluespan">
+        <p>Blue:</p>
+        <input type="range" id="blue" value="100" min="0" max="255"  />
+        <h4 id="bluev">#</h4>
+      </span>
+      <span id="opacityspan">
+        <p>Opacity</p>
+        <input type="range" id="opacity" value="0.4" min="0" max="1.00" step="0.001"/>
+        <h4 id="opacityv">#</h4>
+      </span>
+    </div>
+<script src="app.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>
