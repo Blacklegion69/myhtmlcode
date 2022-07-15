@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   transition: 0.5s;
+  font-family: 'Fira Sans', sans-serif;
 }
 body {
   width: 100%;
@@ -12,6 +15,11 @@ body {
   align-items: center;
   flex-direction: column;
   position: relative;
+  background: url("20220706_173040.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
 }
 .header {
   width: 80%;
@@ -95,6 +103,7 @@ label > p {
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 #output-svg {
+
   width: 100%;
   height: 200px;
   padding: 10px 50px 10px 50px;
