@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+    <title></title>
+<style type="text/css" media="all">
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --x: 10000000px;
+  }
+  body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgba(00,00,00,1);
+  }
+  .container {
+    width: 400px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+  }
+  .container .box span {
+    position: relative;
+    background: -webkit-linear-gradient(left, transparent, rgba(00,00,00,1), transparent);      
+  }
+  .container .box span b{
+    margin-left: 5px;
+    text-transform: uppercase;
+    margin-right: 5px;
+  }
+  
+  .container .box span b:nth-child(1) {
+    color: #4157D1;
+  }
+  .container .box span b:nth-child(2) {
+    color: #C650C2;
+  }
+  .container .box span b:nth-child(3) {
+    color: #FFCC71;
+  }
+  .container .box {
+    transform-style: preserve-3d;
+    transform: perspective(var(--x));
+    animation: animate 17s linear infinite;
+    
+  }
+  @keyframes animate {
+    100% {
+      transform: perspective(var(--x)) rotateX(360deg) rotate(0deg);
+    }
+  }
+  .container .box span {
+    position: absolute;
+    color: white;
+    font-weight: 900;
+    font-size: 40px;
+    transform-style: preserve-3d;
+    transform: translate(-50%,-50%) rotatex(calc(var(--i)*20deg)) translatez(100px);
+  }
+</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <span style="--i:1"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+        <span style="--i:2"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+        <span style="--i:3"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+        <span style="--i:4"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+        <span style="--i:5"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+        <span style="--i:6"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+        <span style="--i:7"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+        <span style="--i:8"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+        <span style="--i:9"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+        <span style="--i:10"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+        <span style="--i:11"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+        <span style="--i:12"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+        <span style="--i:13"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+        <span style="--i:14"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+        <span style="--i:15"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+        <span style="--i:16"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+        <span style="--i:17"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+        <span style="--i:18"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+      </div>
+    </div>
+  </body>
+</html>
