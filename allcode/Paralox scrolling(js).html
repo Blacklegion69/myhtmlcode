@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Ubuntu', sans-serif;
+    }
+    .fix{
+      height: 100vh;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+    }
+    #top{
+      background-image: url('https://picsum.photos/600/900?random=1');
+    }
+    #middle{
+      background-image: url('https://picsum.photos/600/900?random=3');
+    }
+    #bottom{
+      background-image: url('https://picsum.photos/600/900?random=6');
+    }
+  </style>
+</head>
+<body>
+  <div class="fix" id="top"></div>
+  <div class="fix" id="bottom"></div>
+  <div class="fix" id="middle"></div>
+  <div class="fix" id="top"></div>
+  <div class="fix" id="middle"></div>
+  <div class="fix" id="bottom"></div>
+  <div class="fix" id="middle"></div>
+  <div class="fix" id="bottom"></div>
+  <div class="fix" id="top"></div>
+  <div class="fix" id="bottom"></div>
+
+<script type="text/javascript" charset="utf-8">
+
+window.onload = () => {
+     var top = document.querySelectorAll("#top")[0];
+     window.addEventListener("scroll", () => {
+       top.style.backgroundSize = +100+window.pageYOffset+"%";
+     });
+}
+
+</script>
+</body>
+</html>

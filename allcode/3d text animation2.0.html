@@ -5,13 +5,19 @@
     <meta name="" content="">
     <title></title>
 <style type="text/css" media="all">
+  @font-face {
+    font-family: myf;
+    src: url("font.ttf");
+    font-weight: bold;
+  }
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: myf;
   }
   :root {
-    --x: 10000000px;
+    --x: 100000px;
   }
   body {
     width: 100%;
@@ -20,6 +26,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    flex-wrap: wrap;
     background-color: rgba(00,00,00,1);
   }
   .container {
@@ -30,10 +37,6 @@
     align-items: center;
     position: relative;
     transform-style: preserve-3d;
-  }
-  .container .box span {
-    position: relative;
-    background: -webkit-linear-gradient(left, transparent, rgba(00,00,00,1), transparent);      
   }
   .container .box span b{
     margin-left: 5px;
@@ -49,6 +52,7 @@
   }
   .container .box span b:nth-child(3) {
     color: #FFCC71;
+    text-decoration: underline;
   }
   .container .box {
     transform-style: preserve-3d;
@@ -66,8 +70,12 @@
     color: white;
     font-weight: 900;
     font-size: 40px;
+    /*
+    background: black;
+    */
+    background: -webkit-linear-gradient(90deg, transparent, rgba(00,00,00,0.5), transparent);      
     transform-style: preserve-3d;
-    transform: translate(-50%,-50%) rotatex(calc(var(--i)*20deg)) translatez(100px);
+    transform: translate(-50%,-50%) rotatex(calc(var(--i)*18deg)) translatez(100px);
   }
 </style>
   </head>
@@ -92,6 +100,8 @@
         <span style="--i:16"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
         <span style="--i:17"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
         <span style="--i:18"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+        <span style="--i:19"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
+        <span style="--i:20"><b>I</b><b>Love</b><b>BANGLADESH</b></span>
       </div>
     </div>
   </body>
